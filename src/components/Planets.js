@@ -14,7 +14,7 @@ const Planets = () => {
   );
 
   return (
-    <>
+    <div className="animationContainer">
       <h2>Planets</h2>
       {isLoading && <div className="loading">Loading</div>}
       {isError && <div className="error">Error fetching data</div>}
@@ -25,7 +25,7 @@ const Planets = () => {
           ))}
         </ul>
       )}
-    </>
+    </div>
   );
 };
 

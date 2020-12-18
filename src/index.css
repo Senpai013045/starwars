@@ -104,3 +104,37 @@ li.card {
 .card p {
   margin-bottom: 0.5rem;
 }
+
+.animationContainer {
+  transition: all 500ms;
+  transform-origin: left;
+}
+.animationContainer2 {
+  transition: all 500ms;
+  transform-origin: left;
+}
+.left-enter {
+  transform: translateX(-100vw);
+}
+.left-enter-active {
+  transform: translateX(0);
+}
+.left-exit {
+  transform: translateX(0);
+}
+.left-exit-active {
+  transform: translateX(-100vw);
+}
+
+.right-enter {
+  transform: translateX(100vw);
+}
+.right-enter-active {
+  transform: translateX(0);
+}
+.right-exit {
+  transform: translateX(0);
+}
+.right-exit-active {
+  transform: translateX(100vw);
+}
