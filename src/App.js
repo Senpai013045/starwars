@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import People from "./components/People";
 import Planets from "./components/Planets";
+import { CSSTransition } from "react-transition-group";
 
 function App() {
   const [page, setPage] = useState("planets");
@@ -12,7 +13,27 @@ function App() {
         <Navbar setPage={setPage} />
       </header>
       <div className="content">
-        {page === "planets" ? <Planets /> : <People />}
+        <CSSTransition
+          key="first"
+          in={page === "planets"}
+          mountOnEnter
+          unmountOnExit
+          timeout={500}
+          classNames="left"
+        >
+          <Planets />
+        </CSSTransition>
+
+        <CSSTransition
+          key="second"
+          in={page === "people"}
+          mountOnEnter
+          unmountOnExit
+          timeout={500}
+          classNames="right"
+        >
+          <People />
+        </CSSTransition>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ const People = () => {
   );
 
   return (
-    <>
+    <div className="animationContainer2">
       <h2>People</h2>
       {isLoading && <div className="loading">Loading</div>}
       {isError && <div className="error">Error fetching data</div>}
@@ -25,7 +25,7 @@ const People = () => {
           ))}
         </ul>
       )}
-    </>
+    </div>
   );
 };
 
