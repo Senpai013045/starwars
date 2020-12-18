@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --color-yellow: #ffff57;
+  --color-grey: #ccc;
+  --color-white: #fff;
+  --color-black: #222;
+  --color-element: #1b1b1b;
+  --color-grey2: #999;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--color-black);
+}
+
+.app {
+  padding-top: 5rem;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1.header1 {
+  flex: 1;
+  color: var(--color-yellow);
+  font-size: 5rem;
+}
+
+nav {
+  display: flex;
+}
+
+.navBtn:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.navBtn {
+  border: 0.1rem solid var(--color-white);
+  font-size: 1.6rem;
+  background-color: var(--color-black);
+  padding: 1rem;
+  color: var(--color-white);
+  border-radius: 1rem;
+  transition: all 0.25s;
+  cursor: pointer;
+  backface-visibility: none;
+  /* fixing the junk pixels...thanks css */
+  outline: 1px solid transparent;
+}
+
+.navBtn:hover {
+  color: var(--color-yellow);
+  border-color: var(--color-yellow);
+  transform: scale(1.1);
+}
+
+h2 {
+  color: var(--color-white);
+  font-size: 3rem;
+}
+
+.content {
+  margin-top: 6rem;
+  color: var(--color-grey);
+}
+
+ul.dataContainer {
+  list-style: none;
+  margin-top: 5rem;
+  font-size: 1.4rem;
+}
+
+li.card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+li.card {
+  background-color: var(--color-element);
+  padding: 1.5rem;
+  color: var(--color-grey2);
+  border-radius: 1rem;
+}
+.card h3 {
+  color: var(--color-yellow);
+  margin-bottom: 1rem;
+}
+.card p {
+  margin-bottom: 0.5rem;
 }
